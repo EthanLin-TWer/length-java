@@ -1,23 +1,14 @@
-# 练功房脚手架
+# 单位转换
 
-如果你恰好也用Java做练功房的练习，可以从这个脚手架开始入手。
+美国⼈习惯使用很古怪的英制度量单位。英制度量单位的转换经常不是⼗进制的，比如说:
 
-准备步骤：
+- 1 英尺(foot) = 12 英寸(inch)
+- 1 码(yard) = 3 英尺(foot)
 
-* `git clone https://github.com/gigix/dojo-scaffold.git`
-* `mv dojo-scaffold my_kata && cd my_kata`
-* `./gradlew clean build`
-  * 如果你使用Windows，这一步应该是 `gradlew.bat clean build`
+**你的任务是：写一个程序，用于处理英寸、英尺、码之间的转换。**
 
-此时你应该看到成功的build：
+例如：
 
-```
-$ ./gradlew clean build
-
-BUILD SUCCESSFUL in 1s
-4 actionable tasks: 4 executed
-```
-
-用Intellij IDEA或Eclipse或者你习惯的任何IDE（但是我强烈建议不要使用IDEA或Eclipse之外的其他IDE）导入工程，运行全部测试，你应该看到绿条。
-
-从这里开始你的Dojo练习。
+- 1 英尺应该等于 12 英寸
+- 1 码应该等于 36 英寸
+- 6 英寸应该等于 1/2 英尺
