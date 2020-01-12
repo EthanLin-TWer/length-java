@@ -18,6 +18,9 @@ public class Length {
         if (targetUnit.equals(Length.YARD)) {
             temp_unit = Unit.YARD;
         }
+        if (targetUnit.equals(Length.FOOT)) {
+            temp_unit = Unit.FOOT;
+        }
         return temp_as(targetUnit, temp_unit);
     }
 
