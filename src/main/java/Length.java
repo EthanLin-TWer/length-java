@@ -15,6 +15,9 @@ public class Length {
         if (targetUnit.equals(Length.INCH)) {
             temp_unit = Unit.INCH;
         }
+        if (targetUnit.equals(Length.YARD)) {
+            temp_unit = Unit.YARD;
+        }
         return temp_as(targetUnit, temp_unit);
     }
 
