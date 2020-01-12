@@ -22,7 +22,7 @@ public class LengthTest {
 
     @Test
     public void should_1_yard_equals_1_yard() {
-        Length result = new Length(1, "yard").as("yard");
+        Length result = new Length(1, Length.YARD).as("yard");
 
         assertThat(result.getValue(), is(1.0));
         assertThat(result.getUnit(), is("yard"));
