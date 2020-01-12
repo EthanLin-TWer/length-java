@@ -13,8 +13,6 @@ public class Length {
     }
 
     public double getValue(Unit target) {
-        double value = this.value;
-
         if (this.unit == Unit.FOOT) {
             if (target == Unit.YARD) {
                 return this.value / 3;
@@ -38,7 +36,7 @@ public class Length {
                 return this.value / 36;
             }
         }
-        return value;
+        return this.value;
     }
 
     public double getValue() {
