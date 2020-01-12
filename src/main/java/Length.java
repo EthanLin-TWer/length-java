@@ -1,9 +1,6 @@
 public class Length {
     private final double value;
     private final Unit temp_unit;
-    public static final String FOOT = "foot";
-    public static final String YARD = "yard";
-    public static final String INCH = "inch";
 
     public Length(double value, Unit temp_unit) {
         this.value = value;
