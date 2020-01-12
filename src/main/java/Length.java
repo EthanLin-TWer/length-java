@@ -21,13 +21,13 @@ public class Length {
         if (this.unit.equals("yard")) {
             if (targetUnit.equals("inch")) {
                 result = new Length(this.value * 36, targetUnit);
-            } else if (targetUnit.equals("f")){
+            } else if (targetUnit.equals(FOOT)){
                 result = new Length(this.value * 3, targetUnit);
             }
         }
 
         if (this.unit.equals("inch")) {
-            if (targetUnit.equals("f")) {
+            if (targetUnit.equals(FOOT)) {
                 result = new Length(this.value / 12, targetUnit);
             } else if (targetUnit.equals("yard")) {
                 result = new Length(this.value / 36, targetUnit);
