@@ -12,6 +12,7 @@ public class Length {
         final String FOOT = "f";
         final String YARD = "yard";
         final String INCH = "inch";
+
         if (this.unit.equals(FOOT)) {
             if (targetUnit.equals(YARD)) {
                 result = new Length(this.value / 3, targetUnit);
@@ -21,14 +22,14 @@ public class Length {
         }
 
         if (this.unit.equals(YARD)) {
-            if (targetUnit.equals("inch")) {
+            if (targetUnit.equals(INCH)) {
                 result = new Length(this.value * 36, targetUnit);
             } else if (targetUnit.equals(FOOT)){
                 result = new Length(this.value * 3, targetUnit);
             }
         }
 
-        if (this.unit.equals("inch")) {
+        if (this.unit.equals(INCH)) {
             if (targetUnit.equals(FOOT)) {
                 result = new Length(this.value / 12, targetUnit);
             } else if (targetUnit.equals(YARD)) {
