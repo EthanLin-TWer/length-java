@@ -23,7 +23,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals(Length.YARD)) {
+        if (this.temp_unit == Unit.YARD) {
             if (target == Unit.INCH) {
                 result = new Length(this.value * 36, null, target);
             } else if (target == Unit.FOOT){
@@ -31,7 +31,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals(Length.INCH)) {
+        if (this.temp_unit == Unit.INCH) {
             if (target == Unit.FOOT) {
                 result = new Length(this.value / 12, null, target);
             } else if (target == Unit.YARD) {
