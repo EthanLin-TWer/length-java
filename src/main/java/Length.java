@@ -19,23 +19,23 @@ public class Length {
             if (target == Unit.YARD) {
                 return this.value / 3;
             } else if (target == Unit.INCH) {
-                value = this.value * 12;
+                return this.value * 12;
             }
         }
 
         if (this.unit == Unit.YARD) {
             if (target == Unit.INCH) {
-                value = this.value * 36;
+                return this.value * 36;
             } else if (target == Unit.FOOT){
-                value = this.value * 3;
+                return this.value * 3;
             }
         }
 
         if (this.unit == Unit.INCH) {
             if (target == Unit.FOOT) {
-                value = this.value / 12;
+                return this.value / 12;
             } else if (target == Unit.YARD) {
-                value = this.value / 36;
+                return this.value / 36;
             }
         }
         return value;
