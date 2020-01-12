@@ -1,16 +1,16 @@
 public class Length {
     private final double value;
-    private final Unit temp_unit;
+    private final Unit unit;
 
-    public Length(double value, Unit temp_unit) {
+    public Length(double value, Unit unit) {
         this.value = value;
-        this.temp_unit = temp_unit;
+        this.unit = unit;
     }
 
     public Length as(Unit target) {
         Length result = this;
 
-        if (this.temp_unit == Unit.FOOT) {
+        if (this.unit == Unit.FOOT) {
             if (target == Unit.YARD) {
                 result = new Length(this.value / 3, target);
             } else if (target == Unit.INCH) {
@@ -18,7 +18,7 @@ public class Length {
             }
         }
 
-        if (this.temp_unit == Unit.YARD) {
+        if (this.unit == Unit.YARD) {
             if (target == Unit.INCH) {
                 result = new Length(this.value * 36, target);
             } else if (target == Unit.FOOT){
@@ -26,7 +26,7 @@ public class Length {
             }
         }
 
-        if (this.temp_unit == Unit.INCH) {
+        if (this.unit == Unit.INCH) {
             if (target == Unit.FOOT) {
                 result = new Length(this.value / 12, target);
             } else if (target == Unit.YARD) {
@@ -42,6 +42,6 @@ public class Length {
     }
 
     public Unit getUnit() {
-        return temp_unit;
+        return unit;
     }
 }
