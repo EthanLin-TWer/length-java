@@ -60,10 +60,6 @@ public class Length {
         return this.value;
     }
 
-    public String getUnit() {
-        return this.unit;
-    }
-
     public Unit getTemp_unit() {
         return temp_unit;
     }
