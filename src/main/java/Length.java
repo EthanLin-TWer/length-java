@@ -1,6 +1,7 @@
 public class Length {
     private final double value;
     private final String unit;
+    public static final String FOOT = "f";
 
     public Length(double value, String unit) {
         this.value = value;
@@ -9,7 +10,7 @@ public class Length {
 
     public Length as(String targetUnit) {
         Length result = this;
-        final String FOOT = "f";
+        final String FOOT = Length.FOOT;
         final String YARD = "yard";
         final String INCH = "inch";
 
