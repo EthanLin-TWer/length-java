@@ -11,6 +11,10 @@ public class Length {
     }
 
     public Length as(String targetUnit) {
+        return temp_as(targetUnit);
+    }
+
+    public Length temp_as(String targetUnit) {
         Length result = this;
 
         if (this.unit.equals(Length.FOOT)) {
