@@ -7,12 +7,16 @@ public class Length {
     public static final String INCH = "inch";
 
     public Length(double value, String unit) {
-        this.value = value;
-        this.unit = unit;
-        this.temp_unit = temp_determineUnit(unit);
+        this(value, unit, temp_determineUnit(unit));
     }
 
-    public Unit temp_determineUnit(String targetUnit) {
+    public Length(double value, String unit, Unit temp_unit) {
+        this.value = value;
+        this.unit = unit;
+        this.temp_unit = temp_unit;
+    }
+
+    public static Unit temp_determineUnit(String targetUnit) {
         Unit temp_unit = null;
         if (targetUnit.equals(Length.INCH)) {
             temp_unit = Unit.INCH;
