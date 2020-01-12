@@ -3,6 +3,7 @@ public class Length {
     private final String unit;
     public static final String FOOT = "f";
     public static final String YARD = "yard";
+    public static final String INCH = "inch";
 
     public Length(double value, String unit) {
         this.value = value;
@@ -13,7 +14,7 @@ public class Length {
         Length result = this;
         final String FOOT = Length.FOOT;
         final String YARD = Length.YARD;
-        final String INCH = "inch";
+        final String INCH = Length.INCH;
 
         if (this.unit.equals(FOOT)) {
             if (targetUnit.equals(YARD)) {
