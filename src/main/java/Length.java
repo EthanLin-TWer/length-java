@@ -9,7 +9,8 @@ public class Length {
 
     public Length as(String targetUnit) {
         Length result = this;
-        if (this.unit.equals("f")) {
+        final String FOOT = "f";
+        if (this.unit.equals(FOOT)) {
             if (targetUnit.equals("yard")) {
                 result = new Length(this.value / 3, targetUnit);
             } else if (targetUnit.equals("inch")) {
