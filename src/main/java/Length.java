@@ -37,11 +37,10 @@ public class Length {
                 result = new Length(value, target);
             } else if (target == Unit.YARD) {
                 value = this.value / 36;
-                result = new Length(value, target);
             }
         }
 
-        return result;
+        return new Length(value, target);
     }
 
     public double getValue() {
