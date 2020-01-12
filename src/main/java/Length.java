@@ -60,7 +60,7 @@ public class Length {
         return this.value;
     }
 
-    public Unit getTemp_unit() {
+    public Unit getUnit() {
         return temp_unit;
     }
 }
