@@ -2,9 +2,9 @@ public class Length {
     private final double value;
     private final String unit;
 
-    public Length(double val, String uinnt) {
-        this.value = val;
-        this.unit = uinnt;
+    public Length(double value, String unit) {
+        this.value = value;
+        this.unit = unit;
     }
 
     public Length as(String u) {
