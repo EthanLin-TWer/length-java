@@ -23,17 +23,21 @@ public class Length {
 
         if (this.unit == Unit.YARD) {
             if (target == Unit.INCH) {
-                result = new Length(this.value * 36, target);
+                value = this.value * 36;
+                result = new Length(value, target);
             } else if (target == Unit.FOOT){
-                result = new Length(this.value * 3, target);
+                value = this.value * 3;
+                result = new Length(value, target);
             }
         }
 
         if (this.unit == Unit.INCH) {
             if (target == Unit.FOOT) {
-                result = new Length(this.value / 12, target);
+                value = this.value / 12;
+                result = new Length(value, target);
             } else if (target == Unit.YARD) {
-                result = new Length(this.value / 36, target);
+                value = this.value / 36;
+                result = new Length(value, target);
             }
         }
 
