@@ -11,6 +11,11 @@ public class Length {
     }
 
     public Length as(String targetUnit) {
+        Unit temp_unit = temp_determineUnit(targetUnit);
+        return temp_as(targetUnit, temp_unit);
+    }
+
+    public Unit temp_determineUnit(String targetUnit) {
         Unit temp_unit = null;
         if (targetUnit.equals(Length.INCH)) {
             temp_unit = Unit.INCH;
@@ -21,7 +26,7 @@ public class Length {
         if (targetUnit.equals(Length.FOOT)) {
             temp_unit = Unit.FOOT;
         }
-        return temp_as(targetUnit, temp_unit);
+        return temp_unit;
     }
 
     public Length temp_as(String targetUnit, Unit temp_unit) {
