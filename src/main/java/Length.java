@@ -7,33 +7,33 @@ public class Length {
         this.unit = unit;
     }
 
-    public Length as(String u) {
-        Length len = this;
+    public Length as(String targetUnit) {
+        Length result = this;
         if (this.unit.equals("f")) {
-            if (u.equals("yard")) {
-                len = new Length(this.value / 3, u);
-            } else if (u.equals("inch")) {
-                len = new Length(this.value * 12, u);
+            if (targetUnit.equals("yard")) {
+                result = new Length(this.value / 3, targetUnit);
+            } else if (targetUnit.equals("inch")) {
+                result = new Length(this.value * 12, targetUnit);
             }
         }
 
         if (this.unit.equals("yard")) {
-            if (u.equals("inch")) {
-                len = new Length(this.value * 36, u);
-            } else if (u.equals("f")){
-                len = new Length(this.value * 3, u);
+            if (targetUnit.equals("inch")) {
+                result = new Length(this.value * 36, targetUnit);
+            } else if (targetUnit.equals("f")){
+                result = new Length(this.value * 3, targetUnit);
             }
         }
 
         if (this.unit.equals("inch")) {
-            if (u.equals("f")) {
-                len = new Length(this.value / 12, u);
-            } else if (u.equals("yard")) {
-                len = new Length(this.value / 36, u);
+            if (targetUnit.equals("f")) {
+                result = new Length(this.value / 12, targetUnit);
+            } else if (targetUnit.equals("yard")) {
+                result = new Length(this.value / 36, targetUnit);
             }
         }
 
-        return len;
+        return result;
     }
 
     public double getValue() {
