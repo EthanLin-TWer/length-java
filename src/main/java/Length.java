@@ -36,11 +36,11 @@ public class Length {
         return len;
     }
 
-    public double getVal() {
+    public double getValue() {
         return this.value;
     }
 
-    public String getUinnt() {
+    public String getUnit() {
         return this.unit;
     }
 }
