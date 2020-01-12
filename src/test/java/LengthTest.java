@@ -9,7 +9,7 @@ public class LengthTest {
         Length result = new Length(1, Length.INCH).temp_as(Length.INCH, Unit.INCH);
 
         assertThat(result.getValue(), is(1.0));
-        assertThat(result.getUnit(), is(Length.INCH));
+        assertThat(result.getTemp_unit(), is(Unit.INCH));
     }
 
     @Test
