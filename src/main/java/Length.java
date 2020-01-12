@@ -8,11 +8,10 @@ public class Length {
     }
 
     public Length as(Unit target) {
-        double value = getValue(target);
-        return new Length(value, target);
+        return new Length(newValueIn(target), target);
     }
 
-    public double getValue(Unit target) {
+    public double newValueIn(Unit target) {
         if (this.unit == Unit.FOOT) {
             if (target == Unit.YARD) {
                 return this.value / 3;
