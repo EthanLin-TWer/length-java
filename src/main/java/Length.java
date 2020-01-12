@@ -8,6 +8,11 @@ public class Length {
     }
 
     public Length as(Unit target) {
+        double value = getValue(target);
+        return new Length(value, target);
+    }
+
+    public double getValue(Unit target) {
         double value = this.value;
 
         if (this.unit == Unit.FOOT) {
@@ -33,8 +38,7 @@ public class Length {
                 value = this.value / 36;
             }
         }
-
-        return new Length(value, target);
+        return value;
     }
 
     public double getValue() {
