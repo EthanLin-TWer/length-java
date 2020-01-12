@@ -11,7 +11,8 @@ public class Length {
     }
 
     public Length as(String targetUnit) {
-        return temp_as(targetUnit, null);
+        final Unit temp_unit = targetUnit.equals(Length.INCH) ? Unit.INCH : null;
+        return temp_as(targetUnit, temp_unit);
     }
 
     public Length temp_as(String targetUnit, Unit temp_unit) {
