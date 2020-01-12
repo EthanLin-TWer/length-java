@@ -35,7 +35,7 @@ public class Length {
 
         if (this.unit.equals(Length.FOOT)) {
             if (temp_unit == Unit.YARD) {
-                result = new Length(this.value / 3, targetUnit);
+                result = new Length(this.value / 3, null, temp_unit);
             } else if (temp_unit == Unit.INCH) {
                 result = new Length(this.value * 12, targetUnit);
             }
