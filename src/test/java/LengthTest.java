@@ -54,7 +54,7 @@ public class LengthTest {
 
     @Test
     public void should_1_yard_equals_36_inches() {
-        Length result = new Length(1, Length.YARD).as(Unit.INCH);
+        Length result = new Length(1, Length.YARD, Unit.YARD).as(Unit.INCH);
 
         assertThat(result.getValue(), is(36.0));
         assertThat(result.getUnit(), is(Unit.INCH));
@@ -62,7 +62,7 @@ public class LengthTest {
 
     @Test
     public void should_2_yards_equals_72_inches() {
-        Length result = new Length(2, Length.YARD).as(Unit.INCH);
+        Length result = new Length(2, Length.YARD, Unit.YARD).as(Unit.INCH);
 
         assertThat(result.getValue(), is(72.0));
         assertThat(result.getUnit(), is(Unit.INCH));
@@ -70,7 +70,7 @@ public class LengthTest {
 
     @Test
     public void should_12_inches_equals_1_foot() {
-        Length result = new Length(12, Length.INCH).as(Unit.FOOT);
+        Length result = new Length(12, Length.INCH, Unit.INCH).as(Unit.FOOT);
 
         assertThat(result.getValue(), is(1.0));
         assertThat(result.getUnit(), is(Unit.FOOT));
@@ -78,7 +78,7 @@ public class LengthTest {
 
     @Test
     public void should_36_inches_equals_1_yard() {
-        Length result = new Length(36, Length.INCH).as(Unit.YARD);
+        Length result = new Length(36, Length.INCH, Unit.INCH).as(Unit.YARD);
 
         assertThat(result.getValue(), is(1.0));
         assertThat(result.getUnit(), is(Unit.YARD));
@@ -86,7 +86,7 @@ public class LengthTest {
 
     @Test
     public void should_18_inches_equals_half_yard() {
-        Length result = new Length(18, Length.INCH).as(Unit.YARD);
+        Length result = new Length(18, Length.INCH, Unit.INCH).as(Unit.YARD);
 
         assertThat(result.getValue(), is(0.5));
         assertThat(result.getUnit(), is(Unit.YARD));
