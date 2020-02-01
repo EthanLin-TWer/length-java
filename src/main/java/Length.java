@@ -14,7 +14,7 @@ public class Length {
 
     public Length as(String targetUnit, Unit tempUnit) {
         Length len = this;
-        if (this.unit.equals(Length.FOOT)) {
+        if (this.tempUnit==Unit.FOOT) {
             if (tempUnit == Unit.YARD) {
                 len = new Length(this.value / 3, targetUnit, tempUnit);
             } else if (tempUnit == Unit.INCH) {
@@ -22,7 +22,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals(Length.YARD)) {
+        if (this.tempUnit==Unit.YARD) {
             if (tempUnit == Unit.INCH) {
                 len = new Length(this.value * 36, targetUnit, tempUnit);
             } else if (tempUnit == Unit.FOOT) {
@@ -30,7 +30,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals(Length.INCH)) {
+        if (this.tempUnit==Unit.INCH) {
             if (tempUnit == Unit.FOOT) {
                 len = new Length(this.value / 12, targetUnit, tempUnit);
             } else if (tempUnit == Unit.YARD) {
