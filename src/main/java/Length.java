@@ -45,10 +45,6 @@ public class Length {
         return this.value;
     }
 
-    public String getUnit() {
-        return this.unit;
-    }
-
     public Unit getTempUnit() {
         return this.tempUnit;
     }
