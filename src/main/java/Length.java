@@ -1,7 +1,7 @@
 public class Length {
-    private static final String YARD = "yard";
-    private static final String FOOT = "f";
-    private static final String INCH = "inch";
+    static final String YARD = "yard";
+    static final String FOOT = "f";
+    static final String INCH = "inch";
     private final double value;
     private final String unit;
 
