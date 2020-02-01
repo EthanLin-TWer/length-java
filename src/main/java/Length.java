@@ -4,10 +4,12 @@ public class Length {
     static final String INCH = "inch";
     private final double value;
     private final String unit;
+    private final Unit tempUnit;
 
     public Length(double val, String unit) {
         this.value = val;
         this.unit = unit;
+        this.tempUnit = null;
     }
 
     public Length as(String targetUnit, Unit tempUnit) {
