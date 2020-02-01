@@ -12,6 +12,12 @@ public class Length {
         this.tempUnit = null;
     }
 
+    public Length(double val, String unit, Unit tempUnit) {
+        this.value = val;
+        this.unit = unit;
+        this.tempUnit = tempUnit;
+    }
+
     public Length as(String targetUnit, Unit tempUnit) {
         Length len = this;
         if (this.unit.equals(Length.FOOT)) {
