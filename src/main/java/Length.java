@@ -10,29 +10,33 @@ public class Length {
         this.unit = unit;
     }
 
-    public Length as(String u) {
+    public Length as(String targetUnit) {
+        return temp_as(targetUnit);
+    }
+
+    public Length temp_as(String targetUnit) {
         Length len = this;
         if (this.unit.equals(Length.FOOT)) {
-            if (u.equals(Length.YARD)) {
-                len = new Length(this.value / 3, u);
-            } else if (u.equals(Length.INCH)) {
-                len = new Length(this.value * 12, u);
+            if (targetUnit.equals(Length.YARD)) {
+                len = new Length(this.value / 3, targetUnit);
+            } else if (targetUnit.equals(Length.INCH)) {
+                len = new Length(this.value * 12, targetUnit);
             }
         }
 
         if (this.unit.equals(Length.YARD)) {
-            if (u.equals(Length.INCH)) {
-                len = new Length(this.value * 36, u);
-            } else if (u.equals(Length.FOOT)) {
-                len = new Length(this.value * 3, u);
+            if (targetUnit.equals(Length.INCH)) {
+                len = new Length(this.value * 36, targetUnit);
+            } else if (targetUnit.equals(Length.FOOT)) {
+                len = new Length(this.value * 3, targetUnit);
             }
         }
 
         if (this.unit.equals(Length.INCH)) {
-            if (u.equals(Length.FOOT)) {
-                len = new Length(this.value / 12, u);
-            } else if (u.equals(Length.YARD)) {
-                len = new Length(this.value / 36, u);
+            if (targetUnit.equals(Length.FOOT)) {
+                len = new Length(this.value / 12, targetUnit);
+            } else if (targetUnit.equals(Length.YARD)) {
+                len = new Length(this.value / 36, targetUnit);
             }
         }
 
