@@ -11,10 +11,10 @@ public class Length {
     }
 
     public Length as(String targetUnit) {
-        return temp_as(targetUnit);
+        return temp_as(targetUnit, null);
     }
 
-    public Length temp_as(String targetUnit) {
+    public Length temp_as(String targetUnit, Unit tempUnit) {
         Length len = this;
         if (this.unit.equals(Length.FOOT)) {
             if (targetUnit.equals(Length.YARD)) {
