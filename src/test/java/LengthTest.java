@@ -9,7 +9,7 @@ public class LengthTest {
         Length result = new Length(1, "inch").as("inch");
 
         assertThat(result.getVal(), is(1.0));
-        assertThat(result.getUinnt(), is("inch"));
+        assertThat(result.getUnit(), is("inch"));
     }
 
     @Test
@@ -17,7 +17,7 @@ public class LengthTest {
         Length result = new Length(2, "f").as("f");
 
         assertThat(result.getVal(), is(2.0));
-        assertThat(result.getUinnt(), is("f"));
+        assertThat(result.getUnit(), is("f"));
     }
 
     @Test
@@ -25,7 +25,7 @@ public class LengthTest {
         Length result = new Length(1, "yard").as("yard");
 
         assertThat(result.getVal(), is(1.0));
-        assertThat(result.getUinnt(), is("yard"));
+        assertThat(result.getUnit(), is("yard"));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class LengthTest {
         Length result = new Length(1, "f").as("inch");
 
         assertThat(result.getVal(), is(12.0));
-        assertThat(result.getUinnt(), is("inch"));
+        assertThat(result.getUnit(), is("inch"));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class LengthTest {
         Length result = new Length(3, "f").as("yard");
 
         assertThat(result.getVal(), is(1.0));
-        assertThat(result.getUinnt(), is("yard"));
+        assertThat(result.getUnit(), is("yard"));
     }
 
     @Test
@@ -49,7 +49,7 @@ public class LengthTest {
         Length result = new Length(1, "yard").as("f");
 
         assertThat(result.getVal(), is(3.0));
-        assertThat(result.getUinnt(), is("f"));
+        assertThat(result.getUnit(), is("f"));
     }
 
     @Test
@@ -57,7 +57,7 @@ public class LengthTest {
         Length result = new Length(1, "yard").as("inch");
 
         assertThat(result.getVal(), is(36.0));
-        assertThat(result.getUinnt(), is("inch"));
+        assertThat(result.getUnit(), is("inch"));
     }
 
     @Test
@@ -65,7 +65,7 @@ public class LengthTest {
         Length result = new Length(2, "yard").as("inch");
 
         assertThat(result.getVal(), is(72.0));
-        assertThat(result.getUinnt(), is("inch"));
+        assertThat(result.getUnit(), is("inch"));
     }
 
     @Test
@@ -73,7 +73,7 @@ public class LengthTest {
         Length result = new Length(12, "inch").as("f");
 
         assertThat(result.getVal(), is(1.0));
-        assertThat(result.getUinnt(), is("f"));
+        assertThat(result.getUnit(), is("f"));
     }
 
     @Test
@@ -81,7 +81,7 @@ public class LengthTest {
         Length result = new Length(36, "inch").as("yard");
 
         assertThat(result.getVal(), is(1.0));
-        assertThat(result.getUinnt(), is("yard"));
+        assertThat(result.getUnit(), is("yard"));
     }
 
     @Test
@@ -89,6 +89,6 @@ public class LengthTest {
         Length result = new Length(18, "inch").as("yard");
 
         assertThat(result.getVal(), is(0.5));
-        assertThat(result.getUinnt(), is("yard"));
+        assertThat(result.getUnit(), is("yard"));
     }
 }
