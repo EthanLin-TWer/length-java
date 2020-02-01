@@ -54,4 +54,8 @@ public class Length {
     public String getUnit() {
         return this.unit;
     }
+
+    public Unit getTempUnit() {
+        return this.tempUnit;
+    }
 }
